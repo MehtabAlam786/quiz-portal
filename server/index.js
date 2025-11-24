@@ -9,7 +9,9 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://khanrjaa480:ipl123xX@@cluster0.l95eyhz.mongodb.net/quizdb?retryWrites=true&w=majority')
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://khanrjaa480:ipl123xX@cluster0.l95eyhz.mongodb.net/';
+
+mongoose.connect(mongoURI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
