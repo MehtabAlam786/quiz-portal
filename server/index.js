@@ -9,7 +9,9 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/quizdb')
+const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/quizdb';
+
+mongoose.connect(mongoURI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
