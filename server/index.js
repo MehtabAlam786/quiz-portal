@@ -133,7 +133,7 @@ app.get('/api/seed', async (req, res) => {
 
         await Question.insertMany(questions);
         
-        res.send("Success! 20 Questions (HTML & CSS) Loaded.");
+        res.send("Success! 20 Questions Loaded.");
     } catch (err) {
         res.status(500).send("Error seeding database: " + err.message);
     }
