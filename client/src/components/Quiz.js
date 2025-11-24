@@ -71,7 +71,7 @@ const Quiz = () => {
         setScore(0);
         setShowScore(false);
         setUserAnswers([]);
-        setTimeLeft(10);
+        setTimeLeft(30);
     };
 
     if (questions.length === 0) return <h2>Loading Questions...</h2>;
