@@ -11,7 +11,7 @@ app.use(express.json());
 
 const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://khanrjaa480:ipl123xX@cluster0.l95eyhz.mongodb.net/';
 
-mongoose.connect(mongoURI)
+mongoose.connect(MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
