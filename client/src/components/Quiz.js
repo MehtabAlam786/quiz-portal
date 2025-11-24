@@ -12,7 +12,7 @@ const Quiz = () => {
     const [timeLeft, setTimeLeft] = useState(10);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/questions')
+        axios.get('https://quiz-portal-f7qw.onrender.com/api/questions')
             .then(res => setQuestions(res.data))
             .catch(err => console.log(err));
     }, []);
