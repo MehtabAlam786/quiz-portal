@@ -9,7 +9,7 @@ const Quiz = () => {
     const [showScore, setShowScore] = useState(false);
     const [userAnswers, setUserAnswers] = useState([]);
 
-    const [timeLeft, setTimeLeft] = useState(30);
+    const [timeLeft, setTimeLeft] = useState(15);
 
     useEffect(() => {
         axios.get('https://quiz-portal-f7qw.onrender.com/api/questions')
@@ -60,7 +60,7 @@ const Quiz = () => {
         const nextQuestion = currentQuestion + 1;
         if (nextQuestion < questions.length) {
             setCurrentQuestion(nextQuestion);
-            setTimeLeft(30);
+            setTimeLeft(15);
         } else {
             setShowScore(true);
         }
@@ -71,7 +71,7 @@ const Quiz = () => {
         setScore(0);
         setShowScore(false);
         setUserAnswers([]);
-        setTimeLeft(30);
+        setTimeLeft(15);
     };
 
     if (questions.length === 0) return <h2>Loading Questions...</h2>;
